@@ -16,7 +16,6 @@ class CajaAtencion:
             print("No hay nadie en la cola")
             return None
         
-        # sacamos al primero que llegó (comportamiento FIFO)
         turno_atendido = self._turnos.pop(0)
         print(f"Atendiendo a {turno_atendido.persona.nombre} (Turno #{turno_atendido.numero})")
         return turno_atendido
