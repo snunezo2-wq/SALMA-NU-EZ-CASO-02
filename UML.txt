@@ -1,0 +1,29 @@
+@startuml
+class Persona {
+  - _nombre : str
+  - _documento : str
+  + __init__(nombre, documento)
+  + obtener_nombre()
+  + obtener_documento()
+}
+
+class Turno {
+  - _persona : Persona
+  - _numero : int
+  + __init__(persona, numero)
+  + obtener_persona()
+  + obtener_numero()
+}
+
+class CajaAtencion {
+  - _turnos : list
+  + __init__()
+  + agregar_persona(persona)
+  + atender_siguiente()
+  + esta_vacia()
+  + proximo_turno()
+}
+
+Turno --> Persona
+CajaAtencion --> Turno
+@enduml
